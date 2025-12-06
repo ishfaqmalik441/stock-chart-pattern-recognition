@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-# import mplfinance as mpf
+import mplfinance as mpf
 from flag import find_flags_pips
     
 

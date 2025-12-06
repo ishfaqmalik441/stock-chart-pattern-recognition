@@ -238,72 +238,72 @@ results_df['hs_early_total_stop'] = hs_early_total_ret_stop
 # Plot Hold Period Performance
 plt.style.use('dark_background')
 
-# fig, ax = plt.subplots(2, 2, figsize=(15, 10))  # Increased figure size
-# fig.suptitle("IH&S Performance Hold Period", fontsize=16)
-# # Plot the data
-# results_df['ihs_count'].plot.bar(ax=ax[0,0], color='green')
-# results_df['ihs_avg'].plot.bar(ax=ax[0,1], color='red')
-# results_df['ihs_total'].plot.bar(ax=ax[1,0], color='blue')
-# results_df['ihs_wr'].plot.bar(ax=ax[1,1], color='yellow')
-# # Add horizontal reference lines
-# ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
-# # Set titles and labels with better spacing
-# ax[0,0].set_title('Number of Patterns Found', pad=5)
-# ax[0,0].set_xlabel('Order Parameter')
-# ax[0,0].set_ylabel('Number of Patterns')
+fig, ax = plt.subplots(2, 2, figsize=(15, 10))  # Increased figure size
+fig.suptitle("IH&S Performance Hold Period", fontsize=16)
+# Plot the data
+results_df['ihs_count'].plot.bar(ax=ax[0,0], color='green')
+results_df['ihs_avg'].plot.bar(ax=ax[0,1], color='red')
+results_df['ihs_total'].plot.bar(ax=ax[1,0], color='blue')
+results_df['ihs_wr'].plot.bar(ax=ax[1,1], color='yellow')
+# Add horizontal reference lines
+ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
+# Set titles and labels with better spacing
+ax[0,0].set_title('Number of Patterns Found', pad=5)
+ax[0,0].set_xlabel('Order Parameter')
+ax[0,0].set_ylabel('Number of Patterns')
 
-# ax[0,1].set_title('Average Pattern Return', pad=5)
-# ax[0,1].set_xlabel('Order Parameter')
-# ax[0,1].set_ylabel('Average Log Return')
+ax[0,1].set_title('Average Pattern Return', pad=5)
+ax[0,1].set_xlabel('Order Parameter')
+ax[0,1].set_ylabel('Average Log Return')
 
-# ax[1,0].set_title('Sum of Returns', pad=5)
-# ax[1,0].set_xlabel('Order Parameter')
-# ax[1,0].set_ylabel('Total Log Return')
+ax[1,0].set_title('Sum of Returns', pad=5)
+ax[1,0].set_xlabel('Order Parameter')
+ax[1,0].set_ylabel('Total Log Return')
 
-# ax[1,1].set_title('Win Rate', pad=5)
-# ax[1,1].set_xlabel('Order Parameter')
-# ax[1,1].set_ylabel('Win Rate Percentage')
+ax[1,1].set_title('Win Rate', pad=5)
+ax[1,1].set_xlabel('Order Parameter')
+ax[1,1].set_ylabel('Win Rate Percentage')
 
-# # Fix x-axis labels for all subplots
-# for i in range(2):
-#     for j in range(2):
-#         ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
+# Fix x-axis labels for all subplots
+for i in range(2):
+    for j in range(2):
+        ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
 
-# # Adjust subplot spacing to prevent overlap
-# plt.tight_layout()
-# plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)  # More space between subplots
-# plt.show()
+# Adjust subplot spacing to prevent overlap
+plt.tight_layout()
+plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)  # More space between subplots
+plt.show()
 
-# fig, ax = plt.subplots(2, 2, figsize=(15, 10))
-# fig.suptitle("H&S Performance Hold Period", fontsize=16)
-# results_df['hs_count'].plot.bar(ax=ax[0,0], color='green')
-# results_df['hs_avg'].plot.bar(ax=ax[0,1], color='red')
-# results_df['hs_total'].plot.bar(ax=ax[1,0], color='blue')
-# results_df['hs_wr'].plot.bar(ax=ax[1,1], color='yellow')
-# ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
-# ax[0,0].set_title('Number of Patterns Found', pad=5)
-# ax[0,0].set_xlabel('Order Parameter')
-# ax[0,0].set_ylabel('Number of Patterns')
-# ax[0,1].set_title('Average Pattern Return', pad=5)
-# ax[0,1].set_xlabel('Order Parameter')
-# ax[0,1].set_ylabel('Average Log Return')
-# ax[1,0].set_title('Sum of Returns', pad=5)
-# ax[1,0].set_xlabel('Order Parameter')
-# ax[1,0].set_ylabel('Total Log Return')
-# ax[1,1].set_title('Win Rate', pad=5)
-# ax[1,1].set_xlabel('Order Parameter')
-# ax[1,1].set_ylabel('Win Rate Percentage')
-# for i in range(2):
-#     for j in range(2):
-#         ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
+fig, ax = plt.subplots(2, 2, figsize=(15, 10))
+fig.suptitle("H&S Performance Hold Period", fontsize=16)
+results_df['hs_count'].plot.bar(ax=ax[0,0], color='green')
+results_df['hs_avg'].plot.bar(ax=ax[0,1], color='red')
+results_df['hs_total'].plot.bar(ax=ax[1,0], color='blue')
+results_df['hs_wr'].plot.bar(ax=ax[1,1], color='yellow')
+ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
+ax[0,0].set_title('Number of Patterns Found', pad=5)
+ax[0,0].set_xlabel('Order Parameter')
+ax[0,0].set_ylabel('Number of Patterns')
+ax[0,1].set_title('Average Pattern Return', pad=5)
+ax[0,1].set_xlabel('Order Parameter')
+ax[0,1].set_ylabel('Average Log Return')
+ax[1,0].set_title('Sum of Returns', pad=5)
+ax[1,0].set_xlabel('Order Parameter')
+ax[1,0].set_ylabel('Total Log Return')
+ax[1,1].set_title('Win Rate', pad=5)
+ax[1,1].set_xlabel('Order Parameter')
+ax[1,1].set_ylabel('Win Rate Percentage')
+for i in range(2):
+    for j in range(2):
+        ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
 
-# plt.tight_layout()
-# plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)
-# plt.show()
+plt.tight_layout()
+plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)
+plt.show()
 
 fig, ax = plt.subplots(2, 2, figsize=(15, 10))
 fig.suptitle("IH&S Early Performance Hold Period", fontsize=16)
@@ -365,132 +365,126 @@ plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)
 plt.show()
 
 # Plot Stop Rule Performance
-# fig, ax = plt.subplots(2, 2, figsize=(15, 10))
-# fig.suptitle("IH&S Performance Stop Rule", fontsize=16)
-# results_df['ihs_count'].plot.bar(ax=ax[0,0], color='green')
-# results_df['ihs_avg_stop'].plot.bar(ax=ax[0,1], color='red')
-# results_df['ihs_total_stop'].plot.bar(ax=ax[1,0], color='blue')
-# results_df['ihs_wr_stop'].plot.bar(ax=ax[1,1], color='yellow')
-# # Add horizontal reference lines
-# ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
-# # Set titles and labels with better spacing
-# ax[0,0].set_title('Number of Patterns Found', pad=5)
-# ax[0,0].set_xlabel('Order Parameter')
-# ax[0,0].set_ylabel('Number of Patterns')
+fig, ax = plt.subplots(2, 2, figsize=(15, 10))
+fig.suptitle("IH&S Performance Stop Rule", fontsize=16)
+results_df['ihs_count'].plot.bar(ax=ax[0,0], color='green')
+results_df['ihs_avg_stop'].plot.bar(ax=ax[0,1], color='red')
+results_df['ihs_total_stop'].plot.bar(ax=ax[1,0], color='blue')
+results_df['ihs_wr_stop'].plot.bar(ax=ax[1,1], color='yellow')
+# Add horizontal reference lines
+ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
+# Set titles and labels with better spacing
+ax[0,0].set_title('Number of Patterns Found', pad=5)
+ax[0,0].set_xlabel('Order Parameter')
+ax[0,0].set_ylabel('Number of Patterns')
 
-# ax[0,1].set_title('Average Pattern Return', pad=5)
-# ax[0,1].set_xlabel('Order Parameter')
-# ax[0,1].set_ylabel('Average Log Return')
+ax[0,1].set_title('Average Pattern Return', pad=5)
+ax[0,1].set_xlabel('Order Parameter')
+ax[0,1].set_ylabel('Average Log Return')
 
-# ax[1,0].set_title('Sum of Returns', pad=5)
-# ax[1,0].set_xlabel('Order Parameter')
-# ax[1,0].set_ylabel('Total Log Return')
+ax[1,0].set_title('Sum of Returns', pad=5)
+ax[1,0].set_xlabel('Order Parameter')
+ax[1,0].set_ylabel('Total Log Return')
 
-# ax[1,1].set_title('Win Rate', pad=5)
-# ax[1,1].set_xlabel('Order Parameter')
-# ax[1,1].set_ylabel('Win Rate Percentage')
+ax[1,1].set_title('Win Rate', pad=5)
+ax[1,1].set_xlabel('Order Parameter')
+ax[1,1].set_ylabel('Win Rate Percentage')
 
-# # Fix x-axis labels for all subplots
-# for i in range(2):
-#     for j in range(2):
-#         ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
+# Fix x-axis labels for all subplots
+for i in range(2):
+    for j in range(2):
+        ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
 
-# # Adjust subplot spacing to prevent overlap
-# plt.tight_layout()
-# plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)  # More space between subplots
-# plt.show()
+# Adjust subplot spacing to prevent overlap
+plt.tight_layout()
+plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)  # More space between subplots
+plt.show()
 
-# fig, ax = plt.subplots(2, 2, figsize=(15, 10))
-# fig.suptitle("H&S Performance Stop Rule", fontsize=16)
-# results_df['hs_count'].plot.bar(ax=ax[0,0], color='green')
-# results_df['hs_avg_stop'].plot.bar(ax=ax[0,1], color='red')
-# results_df['hs_total_stop'].plot.bar(ax=ax[1,0], color='blue')
-# results_df['hs_wr_stop'].plot.bar(ax=ax[1,1], color='yellow')
-# ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
-# ax[0,0].set_title('Number of Patterns Found', pad=5)
-# ax[0,0].set_xlabel('Order Parameter')
-# ax[0,0].set_ylabel('Number of Patterns')
-# ax[0,1].set_title('Average Pattern Return', pad=5)
-# ax[0,1].set_xlabel('Order Parameter')
-# ax[0,1].set_ylabel('Average Log Return')
-# ax[1,0].set_title('Sum of Returns', pad=5)
-# ax[1,0].set_xlabel('Order Parameter')
-# ax[1,0].set_ylabel('Total Log Return')
-# ax[1,1].set_title('Win Rate', pad=5)
-# ax[1,1].set_xlabel('Order Parameter')
-# ax[1,1].set_ylabel('Win Rate Percentage')
-# for i in range(2):
-#     for j in range(2):
-#         ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
+fig, ax = plt.subplots(2, 2, figsize=(15, 10))
+fig.suptitle("H&S Performance Stop Rule", fontsize=16)
+results_df['hs_count'].plot.bar(ax=ax[0,0], color='green')
+results_df['hs_avg_stop'].plot.bar(ax=ax[0,1], color='red')
+results_df['hs_total_stop'].plot.bar(ax=ax[1,0], color='blue')
+results_df['hs_wr_stop'].plot.bar(ax=ax[1,1], color='yellow')
+ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
+ax[0,0].set_title('Number of Patterns Found', pad=5)
+ax[0,0].set_xlabel('Order Parameter')
+ax[0,0].set_ylabel('Number of Patterns')
+ax[0,1].set_title('Average Pattern Return', pad=5)
+ax[0,1].set_xlabel('Order Parameter')
+ax[0,1].set_ylabel('Average Log Return')
+ax[1,0].set_title('Sum of Returns', pad=5)
+ax[1,0].set_xlabel('Order Parameter')
+ax[1,0].set_ylabel('Total Log Return')
+ax[1,1].set_title('Win Rate', pad=5)
+ax[1,1].set_xlabel('Order Parameter')
+ax[1,1].set_ylabel('Win Rate Percentage')
+for i in range(2):
+    for j in range(2):
+        ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
 
-# plt.tight_layout()
-# plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)
-# plt.show()
+plt.tight_layout()
+plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)
+plt.show()
 
-# fig, ax = plt.subplots(2, 2, figsize=(15, 10))
-# fig.suptitle("IH&S Early Performance Stop Rule", fontsize=16)
-# results_df['ihs_early_count'].plot.bar(ax=ax[0,0], color='green')
-# results_df['ihs_early_avg_stop'].plot.bar(ax=ax[0,1], color='red')
-# results_df['ihs_early_total_stop'].plot.bar(ax=ax[1,0], color='blue')
-# results_df['ihs_early_wr_stop'].plot.bar(ax=ax[1,1], color='yellow')
-# ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
-# ax[0,0].set_title('Number of Patterns Found', pad=5)
-# ax[0,0].set_xlabel('Order Parameter')
-# ax[0,0].set_ylabel('Number of Patterns')
-# ax[0,1].set_title('Average Pattern Return', pad=5)
-# ax[0,1].set_xlabel('Order Parameter')
-# ax[0,1].set_ylabel('Average Log Return')
-# ax[1,0].set_title('Sum of Returns', pad=5)
-# ax[1,0].set_xlabel('Order Parameter')
-# ax[1,0].set_ylabel('Total Log Return')
-# ax[1,1].set_title('Win Rate', pad=5)
-# ax[1,1].set_xlabel('Order Parameter')
-# ax[1,1].set_ylabel('Win Rate Percentage')
-# for i in range(2):
-#     for j in range(2):
-#         ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
+fig, ax = plt.subplots(2, 2, figsize=(15, 10))
+fig.suptitle("IH&S Early Performance Stop Rule", fontsize=16)
+results_df['ihs_early_count'].plot.bar(ax=ax[0,0], color='green')
+results_df['ihs_early_avg_stop'].plot.bar(ax=ax[0,1], color='red')
+results_df['ihs_early_total_stop'].plot.bar(ax=ax[1,0], color='blue')
+results_df['ihs_early_wr_stop'].plot.bar(ax=ax[1,1], color='yellow')
+ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
+ax[0,0].set_title('Number of Patterns Found', pad=5)
+ax[0,0].set_xlabel('Order Parameter')
+ax[0,0].set_ylabel('Number of Patterns')
+ax[0,1].set_title('Average Pattern Return', pad=5)
+ax[0,1].set_xlabel('Order Parameter')
+ax[0,1].set_ylabel('Average Log Return')
+ax[1,0].set_title('Sum of Returns', pad=5)
+ax[1,0].set_xlabel('Order Parameter')
+ax[1,0].set_ylabel('Total Log Return')
+ax[1,1].set_title('Win Rate', pad=5)
+ax[1,1].set_xlabel('Order Parameter')
+ax[1,1].set_ylabel('Win Rate Percentage')
+for i in range(2):
+    for j in range(2):
+        ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
 
-# plt.tight_layout()
-# plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)
-# plt.show()
+plt.tight_layout()
+plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)
+plt.show()
 
-# fig, ax = plt.subplots(2, 2, figsize=(15, 10))
-# fig.suptitle("HS Early Performance Stop Rule", fontsize=16)
-# results_df['hs_early_count'].plot.bar(ax=ax[0,0], color='green')
-# results_df['hs_early_avg_stop'].plot.bar(ax=ax[0,1], color='red')
-# results_df['hs_early_total_stop'].plot.bar(ax=ax[1,0], color='blue')
-# results_df['hs_early_wr_stop'].plot.bar(ax=ax[1,1], color='yellow')
-# ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
-# ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
-# ax[0,0].set_title('Number of Patterns Found', pad=5)
-# ax[0,0].set_xlabel('Order Parameter')
-# ax[0,0].set_ylabel('Number of Patterns')
-# ax[0,1].set_title('Average Pattern Return', pad=5)
-# ax[0,1].set_xlabel('Order Parameter')
-# ax[0,1].set_ylabel('Average Log Return')
-# ax[1,0].set_title('Sum of Returns', pad=5)
-# ax[1,0].set_xlabel('Order Parameter')
-# ax[1,0].set_ylabel('Total Log Return')
-# ax[1,1].set_title('Win Rate', pad=5)
-# ax[1,1].set_xlabel('Order Parameter')
-# ax[1,1].set_ylabel('Win Rate Percentage')
-# for i in range(2):
-#     for j in range(2):
-#         ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
+fig, ax = plt.subplots(2, 2, figsize=(15, 10))
+fig.suptitle("HS Early Performance Stop Rule", fontsize=16)
+results_df['hs_early_count'].plot.bar(ax=ax[0,0], color='green')
+results_df['hs_early_avg_stop'].plot.bar(ax=ax[0,1], color='red')
+results_df['hs_early_total_stop'].plot.bar(ax=ax[1,0], color='blue')
+results_df['hs_early_wr_stop'].plot.bar(ax=ax[1,1], color='yellow')
+ax[0,1].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,0].hlines(0.0, xmin=-1, xmax=len(orders), color='white')
+ax[1,1].hlines(0.5, xmin=-1, xmax=len(orders), color='white')
+ax[0,0].set_title('Number of Patterns Found', pad=5)
+ax[0,0].set_xlabel('Order Parameter')
+ax[0,0].set_ylabel('Number of Patterns')
+ax[0,1].set_title('Average Pattern Return', pad=5)
+ax[0,1].set_xlabel('Order Parameter')
+ax[0,1].set_ylabel('Average Log Return')
+ax[1,0].set_title('Sum of Returns', pad=5)
+ax[1,0].set_xlabel('Order Parameter')
+ax[1,0].set_ylabel('Total Log Return')
+ax[1,1].set_title('Win Rate', pad=5)
+ax[1,1].set_xlabel('Order Parameter')
+ax[1,1].set_ylabel('Win Rate Percentage')
+for i in range(2):
+    for j in range(2):
+        ax[i,j].tick_params(axis='x', rotation=45, labelsize=6)
 
-# plt.tight_layout()
-# plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)
-# plt.show()
-
-
-
-
-
-    
+plt.tight_layout()
+plt.subplots_adjust(top=0.9, hspace=0.4, wspace=0.3)
+plt.show()

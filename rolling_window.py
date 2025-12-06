@@ -74,13 +74,6 @@ if __name__ == "__main__":
     plt.show()
 
 
-# Scipy implementation (faster but use with care to not cheat with future data)
-#import scipy
-#arr = data['close'].to_numpy()
-#bottoms = scipy.signal.argrelextrema(arr, np.less, order=3)
-#tops = scipy.signal.argrelextrema(arr, np.greater, order=3)
-
-
 
 
 

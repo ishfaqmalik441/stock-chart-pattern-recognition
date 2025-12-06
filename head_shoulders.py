@@ -164,10 +164,6 @@ def check_hs_pattern(extrema_indices: List[int], data: np.array, i:int, early_fi
     pat.head_height = data[head] - (data[l_armpit] + (head - l_armpit) * neck_slope)
     pat.pattern_r2 = compute_pattern_r2(data, pat)
 
-    # I experiemented with r-squared as a filter for H&S, but this can delay recognition.
-    # It didn't seem terribly potent, may be useful as a filter in conjunction with other attributes
-    # if one wanted to add a machine learning layer before trading these patterns. 
-
     #if pat.pattern_r2 < 0.0:
     #    return None
 
